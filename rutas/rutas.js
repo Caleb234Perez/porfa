@@ -92,6 +92,7 @@ router.get('/prueba', (req,res) => {
   let b = cuadrado.perimetro(base,altura);
   console.log(a, b);
   res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET');
   res.send({
     base: base,
     altura: altura,
