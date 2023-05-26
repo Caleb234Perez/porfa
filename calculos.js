@@ -1,8 +1,8 @@
 module.exports = {
-    area: function(width) {
-    return Math.pow(width, 2);
-    },
-    perimetro: function (width){
-    return width * 4;
-    }
-   };
+  area: function (base,altura) {
+    return (base*altura)/2
+  },
+  perimetro: function (base,altura) {
+    return base*3;
+  },
+};
