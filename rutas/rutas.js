@@ -85,17 +85,18 @@ router.get('/prueba', (req,res) => {
               
 
                 const cuadrado = require("../calculos");
-                router.get('/calculos/:width', (req, res) => {
-                 const { width } = req.params;
-                 let a = cuadrado.area(width);
-                 let b = cuadrado.perimetro(width);
-                 console.log(width, a, b);
-                 res.setHeader('Access-Control-Allow-Origin','*');
-                 res.send({
-                 ancho: width,
-                 area: a,
-                 perimetro: b
-                 });
+                router.get('/calculos/:base/:altura', (req, res) => {
+                 const { base, altura } = req.params;
+  console.log(base, altura)
+  let a = cuadrado.area(base,altura);
+  let b = cuadrado.perimetro(base,altura);
+  console.log(a, b);
+  res.send({
+    base: base,
+    altura: altura,
+    area: a,
+    perimetro: b,
+  });
                 });
 
                 module.exports = router;
